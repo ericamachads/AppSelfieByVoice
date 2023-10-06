@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Selfie App</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery and Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Custom CSS -->
+    <link href="style.css" rel="stylesheet">
+
+    <!-- Webcam.js for accessing the webcam -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.26/webcam.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <div class="text-center">
+            <a href="#" id="link" download="myselfie.png"></a>
+            <h1>Selfie App with Voice Control</h1>
+            <img id="logo_img" src="selfie.jpeg" alt="Selfie Logo">
+            <hr>
+            <h4 style="color:red;">Press "Allow" when prompted. Then, give a voice command.</h4>
+
+            <div class="form-group">
+                <h3>Say "Take my selfie"</h3>
+                <label>Your voice output:</label>
+                <textarea class="form-control container" id="textbox" readonly="true"></textarea>
+            </div>
+
+            <button class="btn btn-primary" onclick="start()">Start</button>
+            <p>Press the "Start" button</p>
+
+            <label>Your webcam:</label>
+            <div id="camera" class="container"></div>
+
+            <br>
+
+            <label>Your selfie will be displayed here:</label>
+            <div id="result" class="container"></div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
